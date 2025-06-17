@@ -1,8 +1,11 @@
+# .gitignore 파일 내용
+# 비밀 정보가 담긴 환경 설정 파일은 절대 올리지 않음
 .env
-volumes/
-shared/
-neo4j/
-shared-backup/
-.env.test
-searxng/settings.yml
-searxng/uwsgi*
+
+# Python 가상 환경 폴더
+venv/
+__pycache__/
+
+# 기타 민감 정보나 불필요한 파일들
+*.log
+node_modules/
