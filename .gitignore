@@ -9,3 +9,7 @@ __pycache__/
 # 기타 민감 정보나 불필요한 파일들
 *.log
 node_modules/
+
+env.backup.txt
+
+neo4j/data/
