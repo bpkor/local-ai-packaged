@@ -2,7 +2,8 @@ include:
   - ./supabase/docker/docker-compose.yml
 
 volumes:
-  n8n_storage:
+  # n8n_storage:
+  n8n_master_data: {} # <--- "n8n_master_data" 인지 확인
   ollama_storage:
   qdrant_storage:
   open-webui:
@@ -96,9 +97,16 @@ services:
     container_name: n8n
     restart: unless-stopped
     expose:
-      - 5678/tcp
+     - 5678/tcp
+    #ports:
+    #  - "5678:5678"
+      
+    environment:
+      - GENERIC_TIMEZONE=Asia/Seoul
+
     volumes:
-      - n8n_storage:/home/node/.n8n
+      # - n8n_storage:/home/node/.n8n
+      - n8n_master_data:/home/node/.n8n  # <--- 이 줄만 남기고, 주석 처리했던 줄은 삭제합니다.
       - ./n8n/backup:/backup
       - ./shared:/data/shared
     depends_on:
