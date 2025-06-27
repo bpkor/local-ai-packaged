@@ -26,6 +26,10 @@ services:
     ports:
       - 127.0.0.1:3030:3030
 
+    # environment:
+    #   ENCRYPTION_KEY: replace-this-with-an-extremely-long-and-very-random-string-of-at-least-64-characters-c
+
+
   langfuse-web:
     ports:
       - 127.0.0.1:3000:3000
