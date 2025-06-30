@@ -13,3 +13,13 @@ node_modules/
 env.backup.txt
 
 neo4j/data/
+
+n8n/backup
+
+searxng/
+supabase
+*.md
+
+neo4j/*
+
+.gitignore
