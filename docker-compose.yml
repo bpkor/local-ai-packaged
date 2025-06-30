@@ -135,7 +135,8 @@ services:
       - 7474/tcp
       - 7687/tcp
     environment:
-        - NEO4J_AUTH=${NEO4J_AUTH:-"neo4j/your_password"}
+        - NEO4J_AUTH=${NEO4J_AUTH:-"neo4j/my-neo4j-passwordc"}
+        - NEO4J_PLUGINS=["apoc"]
     restart: always
 
   caddy:
